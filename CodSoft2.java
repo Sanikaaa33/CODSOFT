@@ -25,7 +25,7 @@ class BankAccount {
             balance -= amount;
             return true;
         } else {
-            return false; // Insufficient funds
+            return false; 
         }
     }
 }
@@ -56,23 +56,23 @@ class ATMGUI extends JFrame {
     public ATMGUI(ATM atm) {
         this.atm = atm;
 
-        // GUI setup
+      
         setTitle("ATM Machine");
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Components
+        
         JButton depositButton = new JButton("Deposit");
         JButton withdrawButton = new JButton("Withdraw");
         JButton checkBalanceButton = new JButton("Check Balance");
 
-        // Layout
+        
         setLayout(new GridLayout(3, 1));
         add(depositButton);
         add(withdrawButton);
         add(checkBalanceButton);
 
-        // Event listeners
+       
         depositButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String input = JOptionPane.showInputDialog("Enter deposit amount:");
